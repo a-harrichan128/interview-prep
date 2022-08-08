@@ -1,0 +1,8 @@
+Logarithm
+binary search
+recursion
+inverting and reversing
+suffix trees
+heaps
+dynamic programming
+sorting algorithms
