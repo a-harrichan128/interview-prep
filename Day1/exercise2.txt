@@ -1,0 +1,17 @@
+Find a bad number given a list of things to check.
+
+Using linear search is fine for smaller values, but with the range up to 2^31 this means it will take at worst case 2^31 calls if the bad
+version was at the end. 
+
+Things to note here, there was an unbalance in the increment. Left side moved up as right side doesn't increment.
+This is because we do not care of the case when the pivot is false and must start checking from the next entry after pivot.
+
+algorithm is as follows
+
+- using left, right and pivot pointers keep track of what section we are checking
+- sum left and rght and divide by two, we used int() casting to drop the decimals (should floor number) store ans in pivot
+- check if pivot is bad
+    - if pivot is bad(isBadVersion == True) right side gets updated to pivot, but do not decrement this one because it may be the first instance
+    - if pivot is NOT bad(isBadVersion == False) left side is updated to pivot + 1 as we do not need to check the same value again.
+-repeat until both left and right are the same
+return either left or right.
