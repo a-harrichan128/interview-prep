@@ -1,0 +1,6 @@
+DID NOT Finish
+
+covered two end cases.
+
+need to come up with if found cases
+need to come up with before target and after target cases
