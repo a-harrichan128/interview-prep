@@ -9,9 +9,9 @@ class Solution(object):
         right = len(nums) - 1
         found = -1
 
-        if target < nums[0]:
+        if target < nums[left]:
             return 0
-        elif target > nums[len(nums)-1]:
+        elif target > nums[right]:
             return len(nums)
 
         while ((right - left) != 1):
