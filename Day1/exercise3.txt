@@ -1,6 +1,14 @@
-DID NOT Finish
+This exercise was a bit more complicated than previous. While still using a split methodology i decided to split the work 
+in two. There were two conditions to check for before continuing, the first being
+   if the target number was smaller than the first entry
+   or
+   if the target number was larger than the last entry
+these condition immediately return the beginning or end of the array as locations respectively.
 
-covered two end cases.
+the next requirement was to limit the size of checking through the array sequentially in the event the array is larger than 10 items.
+the condition on line 17 is meant to set the pointer left and right to a range not larger than 10 items. after which the following block will
+check between both pointer sequentially until it finds either the target, or the first item larger than target and use this as the index
+to insert.
 
-need to come up with if found cases
-need to come up with before target and after target cases
+the condition to break the while loop is to change the value of "left" pointer equal to right + 1 in order to stop the while loop.
+The variable found is used to hold the index, if one is not found(which is impossible) it returns -1.
