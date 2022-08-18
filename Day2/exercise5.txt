@@ -1,0 +1,29 @@
+This exercise was quite difficult at first
+
+the brute force method of popping the last element to the front was the first approach. I hadn't realized that there were conditions
+i had not considered.
+
+For this example the true conditions to consider are as follow.
+
+nums being of length 0 or 1
+k being less than length of nums
+k being larger than length of nums
+
+could have used a modulo (%) to verify the correct amount of rotations, instead opted to reduce k directly so that its more clear as to why
+I needed that condition satisfied. This way i know that k will always be less than than the length of the array.
+that being said i needed to identify the front and the back of the array.
+
+while working through the question i realized that rotations were much easier to do without having to rotate individually however I
+ran into the issue of not being able to slice correctly. 
+
+My first working iteration appended from the front of the new array(its would be position) to the end of the original array, and then append
+from the front of the orignal array until i find the new front of array in its previous location. at the end i would delete the first element
+of the array until the array is of the correct length.
+
+this approach worked very well until it exceeded the time limit on larger input arrays, i went back and forward until I finally had to 
+check the discussion boards. My major issue was, not being able to identify a faster way aside from slicing to make the array come out
+correctly.
+
+In the end i realized that my syntax was incorrect for slicing and reintializing a globally passed in varible
+
+nums[:] = nums[:range] + nums[range:]                       <---- was the correct way to reintialize.

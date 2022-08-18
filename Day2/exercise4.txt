@@ -1,0 +1,14 @@
+This exercise was pretty interesting, things to note are the passing conditions. Given an array of numbers, square them and
+return the array of squares after they've been sorted. I came up with an interesting way to use two pointers to solve this issue.
+
+first thing to note is that array can be of the form
+ all negatives. all positives, or mixed.
+ that being said the negative and mixed conditions are the most complicated. any non negative numbers after squaring will already be in
+ sorted order. The issue is with negative numbers they must be sorted backwards. the lower the number the higher the square. i decided the
+ easiest way to solve this is to use a pointer for the back, and a pointer for the front. The pointers will only contain the array index
+ will increment from the left and decrease from the right. the condition for them to change is that the square of the number at that index
+ is the largest element in the new array.
+
+ We will check both left and right squares against each other and only accept the largest of the two and append to a new array. the end condition
+ for the loop will be when the left and right pointers are at the same location, at which point we will square the last entry and add to the
+ array. The array that is produced is then reversed so that it is in increasing order as requested for the algorithm.
