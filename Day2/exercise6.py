@@ -25,7 +25,6 @@ class Solution(object):
                             print("\t"+str(firstZero))
                     index += 1
 
-
 s1 = Solution()
 nums = [1, 0, 4, 0, 0, 0, 4, 3, 1, 2, 2]
 s1.moveZeroes(nums)
